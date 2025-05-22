@@ -48,9 +48,9 @@ app.use('/api/terms-conditions', termsConditionsRoutes);
 app.use('/api/privacy-policy', privacyPolicyRoutes);
 app.use('/api/faq', faqRoutes);
 
-app.send((req,res)=>{
-  res.send("hello")
-})
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port ${process.env.PORT}`)
 );
